@@ -4,6 +4,7 @@ import React , {useState , useEffect} from 'react'
 import { Search } from './Search'
 import axios from 'axios'
 import Spinner from '@/components/Spinner'
+import { ImageDialog } from './ImageDialog'
 
 export const ImageCont = () => {
     const [search , setSearch] = useState("all")
@@ -45,12 +46,16 @@ export const ImageCont = () => {
                 {data != null ? (
                 <div className = "imgCont gap-2">
                     {data.map((ele) => (
-                        <img className = "w-full mb-2" src = {ele.src.original} alt = {ele.alt} />
+                        <ImageDialog 
+                            src = {ele.src.original} 
+                            alt = {ele.alt} 
+                            imgObj = {ele.src}
+                        />
                     ))}
                 </div>
                 ) : (
                     <div className = "flex items-center justify-center h-full">
-                        <Spinner/>
+                        <Spinner size={'lg'} />
                     </div>
                 )}
             </section>
