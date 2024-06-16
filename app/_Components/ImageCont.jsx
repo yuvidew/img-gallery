@@ -47,6 +47,7 @@ export const ImageCont = () => {
                 <div className = "imgCont gap-2">
                     {data.map((ele) => (
                         <ImageDialog 
+                            key = {ele.alt}
                             src = {ele.src.original} 
                             alt = {ele.alt} 
                             imgObj = {ele.src}
