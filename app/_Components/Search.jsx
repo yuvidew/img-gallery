@@ -13,8 +13,8 @@ export const Search = ({
                 <Image className = " opacity-75 h-5 w-6 " />
                 <Input value = {value} onChange = {(e) => setValue(e.target.value)} placeholder = "Search image.."   />
                 <SlidersHorizontal className = " opacity-75 h-5 w-6 " />
-                <div className = "lg:hidden block">
-                    <SideBar/>
+                <div className = "lg:hidden block mt-1 ml-2">
+                    <SideBar className = " opacity-75 h-5 w-6 " />
                 </div>
             </div>
         </div>
